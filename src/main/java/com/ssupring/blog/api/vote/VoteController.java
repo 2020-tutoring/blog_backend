@@ -1,4 +1,4 @@
-package com.ssupring.blog;
+package com.ssupring.blog.api.vote;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

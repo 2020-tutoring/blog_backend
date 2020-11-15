@@ -1,4 +1,4 @@
-package com.ssupring.blog;
+package com.ssupring.blog.api.vote;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
