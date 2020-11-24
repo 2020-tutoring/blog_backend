@@ -31,8 +31,8 @@ public class Post {
 
 
   @Builder
-  public Post(Long id, String author, String title, String body, LocalDateTime deadline) {
-    this.postId = id;
+
+  public Post( String author, String title, String body, LocalDateTime deadline) {
     this.author = author;
     this.title = title;
     this.body = body;

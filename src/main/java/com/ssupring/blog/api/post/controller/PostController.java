@@ -24,25 +24,23 @@ public class PostController {
   }
   */
 
-  @DeleteMapping("/post/{postId}")
+  @DeleteMapping("post/{postId}")
   public String delete(@PathVariable("postId") Long postId) {
     postService.deletePost(postId);
     return "redirect:/";
   }
 
-  @GetMapping("/post{title}")
-  public Post getPost() {
-    return postService.getPost();
+  @GetMapping("post/{title}")
+  public Post getPost(@PathVariable("title") String title) {
+    return postService.getPost(title);
   }
 
-  @PostMapping("/{title},{deadline}")
+  @PostMapping("/post/{title}/{author}/{body}/{deadline}")
   public void postPost(@PathVariable("title") String title, @PathVariable("deadline")
-      LocalDateTime deadline) {
-    postService.postPost(title, deadline);
+      LocalDateTime deadline,@PathVariable("author") String author, @PathVariable("body") String body) {
+    postService.postPost(title,author, body, deadline);
 
   }
 
-  public void closePost() {
 
-  }
 }
