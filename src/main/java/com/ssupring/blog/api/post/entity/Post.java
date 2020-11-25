@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Getter
-@NoArgsConstructor
 public class Post {
 
   @Id
@@ -30,7 +29,6 @@ public class Post {
   private LocalDateTime deadline;//마감일
 
 
-  @Builder
 
   public Post( String author, String title, String body, LocalDateTime deadline) {
     this.author = author;
@@ -38,5 +36,9 @@ public class Post {
     this.body = body;
     this.deadline = deadline;
     creationDateTime = LocalDateTime.now();
+  }
+
+  public Post() {
+
   }
 }
