@@ -29,8 +29,8 @@ public class Post {
   private LocalDateTime deadline;//마감일
 
 
-  @Builder
-  public Post(String author, String title, String body, LocalDateTime deadline) {
+
+  public Post( String author, String title, String body, LocalDateTime deadline) {
     this.author = author;
     this.title = title;
     this.body = body;

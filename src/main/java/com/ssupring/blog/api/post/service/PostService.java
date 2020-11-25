@@ -18,13 +18,14 @@ public class PostService {
     this.postRepository = postRepository;
   }
 
-  public Post getPost() {
-    Post post = postRepository.findByTitle("제목");
+  public Post getPost(String title) {
+    Post post = postRepository.findByTitle(title);
     return post;
   }
 
-  public void postPost(String title, LocalDateTime deadline) {
-    //Post post = postRepository.makeTitle(title, deadline);
+  public void postPost(String author,String title,String body, LocalDateTime deadline) {
+    Post newPost= new Post(author, title, body,deadline);
+    PostRepository.save(newPost);
   }
 
 
