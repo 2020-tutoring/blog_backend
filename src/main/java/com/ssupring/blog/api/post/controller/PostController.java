@@ -21,7 +21,7 @@ public class PostController {
     this.postService = postService;
   }
 
-  @GetMapping("/")
+  @GetMapping("/post")
   public List<Post> list() {
     List<Post> list = postService.getPostList();
     return postService.getPostList();
