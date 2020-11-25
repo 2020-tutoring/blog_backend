@@ -24,13 +24,13 @@ public class PostController {
   }
   */
 
-  @DeleteMapping("post/{postId}")
+  @DeleteMapping("/post/{postId}")
   public String delete(@PathVariable("postId") Long postId) {
     postService.deletePost(postId);
     return "redirect:/";
   }
 
-  @GetMapping("post/{title}")
+  @GetMapping("/post/{title}")
   public Post getPost(@PathVariable("title") String title) {
     return postService.getPost(title);
   }

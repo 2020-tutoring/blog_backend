@@ -7,5 +7,5 @@ import java.time.LocalDateTime;
 public interface PostRepository extends JpaRepository<Post, Long> {
   Post findByTitle(String title);
   Post deleteByPostId(Long postId);
-  Post save(String author,String title,String body, LocalDateTime deadline);
+  
 }
